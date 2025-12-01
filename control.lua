@@ -58,28 +58,30 @@ script.on_event(defines.events.on_equipment_inserted, function(event)
     end
 end)
 
-script.on_event(defines.events.on_selected_entity_changed, function(event)
-    local current_player = game.players[event.player_index]
-    if current_player.render_mode ~= defines.render_mode.game then
-        return
-    end
+if settings.startup["noct-turn-toward-target"].value then
+    script.on_event(defines.events.on_selected_entity_changed, function(event)
+        local current_player = game.players[event.player_index]
+        if current_player.render_mode ~= defines.render_mode.game then
+            return
+        end
 
-    local selected_entity = current_player.selected
-    local player_character = current_player.character
-    local current_surface = current_player.surface
+        local selected_entity = current_player.selected
+        local player_character = current_player.character
+        local current_surface = current_player.surface
 
-    if selected_entity and player_character and player_character.valid and current_surface.darkness >= 0.3 and
-        not current_player.vehicle and not current_player.walking_state.walking then
+        if selected_entity and player_character and player_character.valid and current_surface.darkness >= 0.3 and
+            not current_player.vehicle and not current_player.walking_state.walking then
 
-        local radians_to_entity = math.atan2(current_player.position.x - selected_entity.position.x,
-            selected_entity.position.y - current_player.position.y)
+            local radians_to_entity = math.atan2(current_player.position.x - selected_entity.position.x,
+                selected_entity.position.y - current_player.position.y)
 
-        local slot = math.floor((radians_to_entity / math.pi + 1) * 4 + 0.5) % 8
-        local idx = slot + 1
+            local slot = math.floor((radians_to_entity / math.pi + 1) * 4 + 0.5) % 8
+            local idx = slot + 1
 
-        player_character.direction = DIRECTION_LOOKUP[idx]
-    end
-end)
+            player_character.direction = DIRECTION_LOOKUP[idx]
+        end
+    end)
+end
 
 script.on_event("noct-flashlight-toggle", function(event)
     local player = game.players[event.player_index]

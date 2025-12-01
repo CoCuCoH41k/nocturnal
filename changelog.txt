@@ -1,0 +1,12 @@
+## 0.0.2 – Add setting for player auto rotation
+- Order the settings
+- Add one for automatically rotating on entity hover
+
+## 0.0.1 – Initial release
+- Permanent night
+- Player, Car, Tank, Train lights improved
+- Halo light around player or vehicles
+- Default lamp color
+- Disabled nightvision
+- Toggle flashlight with ;
+- On-mouse auto rotation
