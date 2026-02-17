@@ -2,7 +2,9 @@ local minimap = {}
 
 local function set_minimap(player, show)
     if player and player.game_view_settings then
-        player.game_view_settings.show_minimap = show
+        if player.game_view_settings.show_minimap == false then
+            player.game_view_settings.show_minimap = show 
+        end -- May can fix bug with UI in open map.
     end
 end
 

@@ -1,7 +1,7 @@
 local DIRECTION_LOOKUP = {defines.direction.north, defines.direction.northeast, defines.direction.east,
                           defines.direction.southeast, defines.direction.south, defines.direction.southwest,
                           defines.direction.west, defines.direction.northwest}
-local SURFACES = {"nauvis"}
+local SURFACES = {"nauvis", "vulcanus", "fulgora", "gleba", "aquilo"}
 
 local minimap = require("control/minimap")
 
@@ -19,6 +19,7 @@ local function _initialize()
     end
 end
 script.on_init(_initialize)
+script.on_event(defines.events.on_surface_created, _initialize)
 script.on_event(defines.events.on_cutscene_cancelled, _initialize)
 
 local function _on_configuration_changed()

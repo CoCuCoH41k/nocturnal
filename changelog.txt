@@ -1,12 +1,26 @@
-## 0.0.2 – Add setting for player auto rotation
-- Order the settings
-- Add one for automatically rotating on entity hover
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3 — Github pull request from CoCuCoH41k with fixes and improvements.
+Date: 2026-02-17
+  Changes:
+    - Changelog file improvement.
+  Features:
+    - Vulcanus, Fulgora, Gleba & Aquilo now have Nocturned too. (May shall be in fixes cause of bad day/night cycle prev.)
+    - Russian translation.
 
-## 0.0.1 – Initial release
-- Permanent night
-- Player, Car, Tank, Train lights improved
-- Halo light around player or vehicles
-- Default lamp color
-- Disabled nightvision
-- Toggle flashlight with ;
-- On-mouse auto rotation
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2 – Add setting for player auto rotation
+  Changes:
+    - Order the settings
+  Features:
+    - Add one for automatically rotating on entity hover
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1 – Initial release
+  Features:
+    - Permanent night
+    - Player, Car, Tank, Train lights improved
+    - Halo light around player or vehicles
+    - Default lamp color
+    - Disabled nightvision
+    - Toggle flashlight with ";"
+    - On-mouse auto rotation
