@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4 — Github pull request from CoCuCoH41k with softlock fix.
+Date: 2026-02-18
+  Bugfixes:
+    - Fixed softlock on Vulcanus, and Aquilo. Solar panels now produce a VERY small amount of power on those two planets. (Was impossible to get power in any way you could earlier.)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3 — Github pull request from CoCuCoH41k with fixes and improvements.
 Date: 2026-02-17
   Changes:

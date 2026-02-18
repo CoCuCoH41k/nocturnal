@@ -9,7 +9,12 @@ local function _initialize()
     for _, name in ipairs(SURFACES) do
         local s = game.surfaces[name]
         if s then
-            s.daytime = 0.5
+            if name == "vulcanus" or name == "aquilo" then
+                s.daytime = 0.5125
+            else
+                s.daytime = 0.5
+            end
+            
             s.freeze_daytime = true
         end
     end
